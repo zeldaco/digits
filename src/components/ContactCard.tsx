@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< Updated upstream
 import { Contact } from '@/lib/validationSchemas';
 import { Card, Image } from 'react-bootstrap';
 
@@ -21,21 +20,6 @@ const ContactCard = ({ contact }: { contact: Contact }) => (
         {contact.description}
       </Card.Text>
     </Card.Body>
-=======
-import { Stuff } from '@prisma/client';
-import Link from 'next/link';
-import { Card, Image } from 'react-bootstrap';
-
-/* Renders a single row in the List Stuff table. See list/page.tsx. */
-const ContactCard = ({ name, quantity, condition, id }: Stuff) => (
-  <Card>
-    <td>{name}</td>
-    <td>{quantity}</td>
-    <td>{condition}</td>
-    <td>
-      <Link href={`/edit/${id}`}>Edit</Link>
-    </td>
->>>>>>> Stashed changes
   </Card>
 );
 

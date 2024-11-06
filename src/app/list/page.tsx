@@ -49,7 +49,6 @@ const ListPage = async () => {
           <Row>
             <Col>
               <h1>List Contacts</h1>
-<<<<<<< Updated upstream
               <Row xs={1} md={2} lg={3} className="g-4">
                 {contacts.map((contact) => (
                   <Col key={contact.firstName + contact.lastName}>
@@ -57,9 +56,6 @@ const ListPage = async () => {
                   </Col>
                 ))}
               </Row>
-=======
-              <Row xs={1} md={2} lg={3} className="g-4" />
->>>>>>> Stashed changes
             </Col>
           </Row>
         </Container>

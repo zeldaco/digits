@@ -41,7 +41,7 @@ const EditContactForm = ({ contact }: { contact: Contact }) => {
                 <Row>
                   <Col>
                     <Form.Group>
-                      <Form.Label>First Name</Form.Label>
+                      <Form.Label>First Name </Form.Label>
                       <input
                         type="text"
                         defaultValue={(contact.firstName)}

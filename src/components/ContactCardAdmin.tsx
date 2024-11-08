@@ -2,6 +2,7 @@
 
 import { Contact } from '@prisma/client';
 import { Card, Image } from 'react-bootstrap';
+import Link from 'next/link';
 
 /* Renders a single row in the List Stuff table. See list/page.tsx. */
 const ContactCardAdmin = ({ contact }: { contact: Contact }) => (
@@ -19,6 +20,9 @@ const ContactCardAdmin = ({ contact }: { contact: Contact }) => (
       <Card.Text>{contact.description}</Card.Text>
       <p className="blockquote-footer">{contact.owner}</p>
     </Card.Body>
+    <Card.Footer>
+      <Link href={`edit/${contact.id}`}>Edit</Link>
+    </Card.Footer>
   </Card>
 );
 

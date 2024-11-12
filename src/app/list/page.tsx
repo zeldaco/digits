@@ -4,7 +4,7 @@ import { loggedInProtectedPage } from '@/lib/page-protection';
 import authOptions from '@/lib/authOptions';
 import ContactCard from '@/components/ContactCard';
 import { prisma } from '@/lib/prisma';
-import { Contact } from '@prisma/client';
+import { Contact, Note } from '@prisma/client';
 
 /** Render a list of stuff for the logged in user. */
 const ListPage = async () => {
@@ -22,11 +22,12 @@ const ListPage = async () => {
       owner,
     },
   });
-  const notes = await prisma.note.findMany({
+  const notes: Note[] = await prisma.note.findMany({
     where: {
       owner,
     },
   });
+
   return (
     <main>
       <Container id="list" fluid className="py-3">

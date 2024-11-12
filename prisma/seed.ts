@@ -22,7 +22,6 @@ async function main() {
         role,
       },
     });
-    // console.log(`  Created user: ${user.email} with role: ${user.role}`);
   });
   config.defaultContacts.forEach(async (contact, index) => {
     console.log(`  Adding contact: ${contact.firstName} ${contact.lastName}`);

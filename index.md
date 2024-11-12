@@ -1,6 +1,4 @@
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/landing-page.png)
-
-nextjs-application-template is a sample Next.js 14 application that illustrates:
+Digits is an application that holds contact information of professors of the University of Hawai`i to be easily accessed.
 
 - A standard directory layout using 'src/' as recommended in the [Next.js Project Structure](https://nextjs.org/docs/getting-started/project-structure) guide.
 - [Bootstrap 5 React](https://react-bootstrap.github.io/) for user interface.
@@ -250,59 +248,49 @@ The next step is to use the Login menu to either Login to an existing account or
 
 Clicking on the Login link, then on the Sign In menu item displays this page:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/signin-page.png)
+<img src="doc/sign-up.png">
 
 #### Register page
 
 Alternatively, clicking on the Login link, then on the Sign Up menu item displays this page:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/register-page.png)
+<img src="doc/login.png">
 
 #### Landing (after Login) page, non-Admin user
 
 Once you log in (either to an existing account or by creating a new one), the navbar changes as follows:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/landing-after-login-page.png)
+<img src="doc/contacts.png">
 
-You can now add new Stuff documents, and list the Stuff you have created. Note you cannot see any Stuff created by other users.
+#### Add Contacts page
 
-#### Add Stuff page
+After logging in, here is the page that allows you to add new contacts:
 
-After logging in, here is the page that allows you to add new Stuff:
+<img src="doc/add-contact.png">
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/add-stuff-page.png)
+#### List Contacts page
 
-#### List Stuff page
+After logging in, here is the page that allows you to list all the contacts you have created:
 
-After logging in, here is the page that allows you to list all the Stuff you have created:
+<img src="doc/contacts.png">
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/list-stuff-page.png)
+You click the "Edit" link to go to the Edit Contacts page, shown next.
 
-You click the "Edit" link to go to the Edit Stuff page, shown next.
-
-#### Edit Stuff page
+#### Edit Contact page
 
 After clicking on the "Edit" link associated with an item, this page displays that allows you to change and save it:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/edit-stuff-page.png)
+<img src="doc/edit.png">
 
 #### Landing (after Login), Admin user
 
 You can define an "admin" user in the settings.json file. This user, after logging in, gets a special entry in the navbar:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/admin-landing-page.png)
-
-#### Admin page (list all users stuff)
-
-To provide a simple example of a "super power" for Admin users, the Admin page lists all of the Stuff by all of the users:
-
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/admin-list-stuff-page.png)
-
-Note that non-admin users cannot get to this page, even if they type in the URL by hand.
+<img src="doc/admin-contacts.png">
 
 ### Tables
 
-The application implements two tables "Stuff" and "User". Each Stuff row has the following columns: id, name, quantity, condition, and owner. The User table has the following columns: id, email, password (hashed using bcrypt), role.
+The application implements two tables "Contacts," "User," and "Notes." Each Contact row has the following columns: id, name, address, image, description, and owner. The User table has the following columns: id, email, password (hashed using bcrypt), role.
 
 The Stuff and User models are defined in [prisma/schema.prisma](https://github.com/ics-software-engineering/nextjs-application-template/blob/main/prisma/schema.prisma).
 
